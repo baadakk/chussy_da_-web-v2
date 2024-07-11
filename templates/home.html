@@ -6,45 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>    
-        #banner{
-            height : 360px;
-            width : 100%;
-             margin-bottom :16px;
-        }    
-    
+        #banner {
+            height: 360px;
+            width: 100%;
+            margin-bottom: 16px;
+        }
     </style>
-    
 </head>
 <body>
-      {% include 'nav.html'%}
-    <img class = "img-fluid" id = "banner" src="https://d41e1fc4-636a-4dfe-903b-cc48ab674fe1-00-1buxp8t7v57wm.pike.replit.dev/static/webimage.jpg">
-    <div class = "container">
-    <h1 class = "text-center mt-2 mb-4"">ChussyDA Carriers</h1>
-        <div class = "row" style ="margin-bottom:16px">
-           <div class = "col-md-6">    
-        <p class = "lead">
-    
-        Chussyda Carriers is a premier logistics and transportation service provider, dedicated to delivering exceptional and reliable freight solutions.  Our services encompass a wide range of transportation needs, including domestic and international freight forwarding, warehousing, and distribution. At Chussyda Carriers, we prioritize customer satisfaction and strive to offer competitive pricing without compromising on quality. Our commitment to innovation and excellence positions us as a trusted partner in the logistics industry, ensuring your cargo reaches its destination safely and on time. 
-        </p>
-           </div>
-            <div class = "d-none d md-block col-md-6">
-        <img src = "/static/pop.jpg" height = "320"; border-radius:4px;>"
-                </div>
-        <h2 class = "text-center">Open Positions</h2>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="{{ url_for('static', filename='webimage.jpg') }}">
+    <div class="container">
+        <h1 class="text-center mt-2 mb-4">ChussyDA Carriers</h1>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6">
+                <p class="lead">
+                    Chussyda Carriers is a premier logistics and transportation service provider, dedicated to delivering exceptional and reliable freight solutions. Our services encompass a wide range of transportation needs, including domestic and international freight forwarding, warehousing, and distribution. At Chussyda Carriers, we prioritize customer satisfaction and strive to offer competitive pricing without compromising on quality. Our commitment to innovation and excellence positions us as a trusted partner in the logistics industry, ensuring your cargo reaches its destination safely and on time.
+                </p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+                <img src="{{ url_for('static', filename='pop.jpg') }}" height="320" style="border-radius: 4px;">
+            </div>
+        </div>
+
+        <h2 class="text-center">Open Positions</h2>
         <div>
             {% for job in jobs %}
-              {%include 'jobitem.html'%}
-            
+                {% include 'jobitem.html' %}
             {% endfor %}
         </div>
-        </p>
-     <div class = "text-center">   
-    <a class="btn btn-primary btn-lg" href = "mailto:mailto:bt22mme038@students.vnit.ac.in?subject=Que%20about%20job%20openings&body=NAME%20%3C%20%3E%0D%0A%0D%0AINQUIRY%20%3C%3E">Contact Us</a>
-     </div >    
 
-    <P class = "mt-4">Copyright 2025, Anand#Pawan </P>    
+        <div class="text-center">   
+            <a class="btn btn-primary btn-lg" href="mailto:bt22mme038@students.vnit.ac.in?subject=Query%20about%20job%20openings&body=NAME%20%3C%20%3E%0D%0A%0D%0AINQUIRY%20%3C%3E">Contact Us</a>
+        </div>
+
+        <p class="mt-4">Copyright 2025, Anand#Pawan</p>    
     </div>    
-   </div>
-    {%include 'footer.html'%}
+
+    {% include 'footer.html' %}
 </body>
 </html>

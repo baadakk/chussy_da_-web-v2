@@ -3,7 +3,7 @@
     <h4 style="color:rgb(120,120,120); margin-bottom:4px;">
         {{ job['title'] }}
     </h4>
-    <div><b>Location:</b> {{ job['location'] }}</div>
+    <!-- <div><b>Lolcation:</b> {{ job['location'] }}</div> -->
 
     {% if 'salary' in job %}
     <div>
@@ -11,8 +11,22 @@
     </div>
     {% endif %}
         </div>
-    <div class= "col-3">
+    <div class="col-3";class= "col-2 padding-right:16px">
         <a href = "mailto: mailto:bt22mme038@students.vnit.ac.in?subject=enter%20applied%20{{job['title']}}&body=Tinder%20profile%20link%20%3A%0D%0A%0D%0Aonly%20fans%20link%20%3A%0D%0A%0D%0AName%20%3A%0D%0A%0D%0Aresume%20link%20%3A%0D%0A%0D%0Alinked%20in%20profile%3A%0D%0A%0D%0A%0D%0A"type="button" class="btn btn-outline-success">APPLY BITCH</a>
     </div>
     </div>
+<!-- jobitem.html -->
+<div class= "col-9">
+
+
+    
+    <div style = "margin-bottom:16px;padding-bottom:8px;";class="card-body">
+        
+        <h5 style = "color:rgb(120,120,120);margin_bottom:16px;class="card-title">{{ job.TITLE }}</h5>
+        <p class="card-text"><strong>Location:</strong> {{ job.LOCATION }}</p>
+        <p class="card-text"><strong>Salary:</strong> {{ job.SALARY }} {{ job.currency }}</p>
+        <!-- <p class="card-text"><strong>Responsibilities:</strong><br>{{ job.responsibilities }}</p>
+        <p class="card-text"><strong>Requirements:</strong><br>{{ job.requirements }}</p> -->
+    </div>
+</div>
 

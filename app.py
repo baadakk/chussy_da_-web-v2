@@ -18,7 +18,7 @@ def list_jobs():
 def show_job(id):
     job = load_job_from_db(id)  # Fetch the job based on the ID
     if job:
-        return jsonify(job)
+        return render_template('jobpage.html', job=job)
     else:
         return jsonify({'error': 'Job not found'}), 404
 
